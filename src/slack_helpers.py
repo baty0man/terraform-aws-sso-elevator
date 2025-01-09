@@ -128,6 +128,8 @@ class RequestForAccessView:
     @classmethod
     def build_select_permission_set_input_block(cls, permission_sets: list[entities.aws.PermissionSet]) -> InputBlock:
         sorted_permission_sets = sorted(permission_sets, key=lambda permission_set: permission_set.name)
+        if len(sorted_permission_sets) > 99: 
+            sorted_permission_sets = sorted_permission_sets[:99]
         return InputBlock(
             block_id=cls.PERMISSION_SET_BLOCK_ID,
             label=PlainTextObject(text="Select permission set"),

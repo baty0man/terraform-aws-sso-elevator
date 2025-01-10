@@ -70,7 +70,7 @@ class RequestForAccessView:
             close=PlainTextObject(text="Cancel"),
             title=PlainTextObject(text="Get AWS access"),
             blocks=[
-                SectionBlock(text=MarkdownTextObject(text=":wave: Hey! Please fill form below to request AWS access.")),
+                SectionBlock(text=MarkdownTextObject(text=":wave: Hey Brotha! Please fill form below to request AWS access.")),
                 DividerBlock(),
                 SectionBlock(
                     block_id=cls.DURATION_BLOCK_ID,

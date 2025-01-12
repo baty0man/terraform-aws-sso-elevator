@@ -34,6 +34,7 @@ app = App(
 
 
 def lambda_handler(event: str, context):  # noqa: ANN001, ANN201
+    print(event)
     slack_handler = SlackRequestHandler(app=app)
     return slack_handler.handle(event, context)
 
